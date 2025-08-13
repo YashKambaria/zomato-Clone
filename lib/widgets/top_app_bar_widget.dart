@@ -22,7 +22,9 @@ class _TopAppBarWidgetState extends State<TopAppBarWidget> {
                 children: [
                   Icon(Icons.location_on, color: Colors.green.shade800, size: 25),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      print("Location");
+                    },
                     child: Row(
                       children: [
                         Text(
