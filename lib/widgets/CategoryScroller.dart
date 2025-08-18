@@ -9,6 +9,7 @@ class Categoryscroller extends StatefulWidget {
 }
 
 class _CategoryscrollerState extends State<Categoryscroller> {
+  int selectedIndex=0;
   @override
   Widget build(BuildContext context) {
     final categories = [
@@ -54,24 +55,48 @@ class _CategoryscrollerState extends State<Categoryscroller> {
         itemCount: categories.length,
         itemBuilder: (context, index) {
             final category=categories[index];
-            return Column(
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage(category['image'] as String),
-                      fit: BoxFit.cover,
+            final isSelected=index==selectedIndex;
+            return GestureDetector(
+              onTap: (){
+                setState(() {
+                  selectedIndex=index;
+                });
+              },
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    height: 70,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(category['image'] as String),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                Text(
-                  category['label'] as String,
-                  style: const TextStyle(color: Colors.white, fontSize: 14),
-                )
-              ],
+                  Text(
+                    category['label'] as String,
+                    style: TextStyle(
+                      color: isSelected ? Colors.white : Colors.grey,
+                        fontSize: 14,
+                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                    ),
+                  ),
+                  AnimatedContainer(duration:const Duration(
+                    milliseconds: 250
+                  ),
+                    height: 3,
+                    width: isSelected?50:0,
+                    curve: Curves.easeInOut,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2),
+                      color: Colors.green
+                    ),
+                  ),
+                ],
+              ),
             );
         },
       ),
