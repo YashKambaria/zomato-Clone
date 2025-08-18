@@ -1,16 +1,76 @@
-# zomato_clone
+# 🍴 Zomato Clone – Flutter + Spring Boot
 
-A new Flutter project.
+A **full-stack food delivery application** inspired by Zomato.  
+Built with **Flutter** (frontend) and **Spring Boot + MongoDB** (backend).
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+### 👤 User Side (Flutter App)
+- 🔐 Authentication (Signup/Login with JWT)
+- 🏠 Home Page with categories, filters, and restaurant listings
+- 🔍 Search restaurants and dishes
+- 🛒 Cart & Checkout flow
+- 💳 Payment Gateway Integration (Razorpay/Stripe)
+- 📍 Order Tracking with live map updates (Google Maps API)
+- 🌙 Dark Mode UI
 
-A few resources to get you started if this is your first Flutter project:
+### ⚙️ Backend (Spring Boot)
+- ✅ JWT-based Authentication
+- 🍔 Restaurant, Food Item, and Order APIs
+- 📦 Order Management & Status Updates
+- 💾 MongoDB for data persistence
+- ⚡ Optimizations with Redis Caching & Kafka Messaging (future-ready)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+### Frontend
+- Flutter
+- Riverpod (State Management)
+- Google Maps API
+- Razorpay/Stripe SDK
+
+### Backend
+- Spring Boot
+- MongoDB
+- Redis (Caching)
+- Kafka (Messaging)
+- Twilio (Notifications – optional)
+
+---
+
+## 📂 Project Structure  
+zomato-clone/
+│── frontend/ (Flutter app)
+│ ├── lib/
+│ │ ├── screens/ # Home, Cart, Profile, Payment, etc.
+│ │ ├── widgets/ # Reusable UI widgets
+│ │ ├── state/ # Riverpod providers
+│ │ └── main.dart
+│
+│── backend/ (Spring Boot)
+│ ├── src/main/java/com/zomato/...
+│ │ ├── controllers/
+│ │ ├── services/
+│ │ ├── models/
+│ │ ├── repositories/
+│ │ └── config/
+│ └── pom.xml
+
+
+---
+
+## ⚡ Setup Instructions
+
+### Frontend (Flutter)
+```bash
+cd frontend
+flutter pub get
+flutter run
+```
+### Backend (Spring Boot)
+```bash
+cd backend
+mvn spring-boot:run
+```
