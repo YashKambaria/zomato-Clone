@@ -84,12 +84,6 @@ zomato-clone/
 
 ### Frontend (Flutter)
 ```bash
-cd frontend
 flutter pub get
 flutter run
-```
-### Backend (Spring Boot)
-```bash
-cd backend
-mvn spring-boot:run
 ```
