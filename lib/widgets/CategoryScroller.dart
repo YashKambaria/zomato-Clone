@@ -18,7 +18,7 @@ class _CategoryscrollerState extends State<Categoryscroller> {
       },
       {
         'image': 'assets/Cake.avif',
-        'label': 'All',
+        'label': 'Cake',
       },
       {
         'image': 'assets/Noodles.avif',
@@ -36,30 +36,14 @@ class _CategoryscrollerState extends State<Categoryscroller> {
         'image': 'assets/Rolls.avif',
         'label': 'Rolls',
       },
-      // {
-      //   // 'image': 'assets/images/thali.png',
-      //   'label': 'Oth',
-      // },
-      // {
-      //   // 'image': 'assets/images/thali.png',
-      //   'label': 'Oth',
-      // },
-      // {
-      //   // 'image': 'assets/images/thali.png',
-      //   'label': 'Oth',
-      // },
-      // {
-      //   // 'image': 'assets/images/thali.png',
-      //   'label': 'Oth',
-      // },
-      // {
-      //   // 'image': 'assets/images/thali.png',
-      //   'label': 'Oth',
-      // },
-      // {
-      //   // 'image': 'assets/images/thali.png',
-      //   'label': 'Oth',
-      // },
+      {
+        'image': 'assets/Sandwich.avif',
+        'label': 'Sandwich',
+      },
+      {
+        'image': 'assets/North_Indian.avif',
+        'label': 'North Indian',
+      },
     ];
     return SizedBox(
       height: 110,
