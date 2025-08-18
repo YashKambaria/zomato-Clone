@@ -1,25 +1,19 @@
-# --- Ignore Native Build Files ---
+# --- Ignore Build System & Generated Files ---
 *.cmake linguist-vendored
 CMakeLists.txt linguist-vendored
 *.cpp linguist-vendored
 *.c linguist-vendored
 *.h linguist-vendored
-*.m linguist-vendored
-*.mm linguist-vendored
-*.swift linguist-vendored
-*.java linguist-vendored
-*.kt linguist-vendored
+
+# Ignore gradle/podspec/plist/build config files
 *.gradle linguist-vendored
 *.podspec linguist-vendored
 *.plist linguist-vendored
 *.xml linguist-vendored
 
-# --- Ignore Entire Native Folders ---
-/android/** linguist-vendored
-/ios/** linguist-vendored
-/macos/** linguist-vendored
-/linux/** linguist-vendored
-/windows/** linguist-vendored
-
-# --- Highlight Dart as Primary ---
+# --- Keep actual app languages visible ---
 *.dart linguist-detectable=true
+*.swift linguist-detectable=true
+*.java linguist-detectable=true
+*.kt linguist-detectable=true
+*.html linguist-detectable=true
