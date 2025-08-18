@@ -47,7 +47,7 @@ class _CategoryscrollerState extends State<Categoryscroller> {
       },
     ];
     return SizedBox(
-      height: 110,
+      height: 90,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -66,7 +66,7 @@ class _CategoryscrollerState extends State<Categoryscroller> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    height: 70,
+                    height: 60,
                     width: 70,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,

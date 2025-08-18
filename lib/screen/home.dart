@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zomato_clone/widgets/CategoryScroller.dart';
+import 'package:zomato_clone/widgets/filter_widget.dart';
 import 'package:zomato_clone/widgets/search_bar_widget.dart';
 import 'package:zomato_clone/widgets/toggle_mode_widget.dart';
 import 'package:zomato_clone/widgets/zomato_gold_widget.dart';
@@ -20,7 +21,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255,24,23,28),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           TopAppBarWidget(),
           Row(
@@ -32,6 +33,7 @@ class _HomeState extends State<Home> {
           ),
           ZomatoGoldWidget(),
           Categoryscroller(),
+          FilterWidget(),
 
 
         ],
