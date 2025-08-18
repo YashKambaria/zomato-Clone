@@ -44,22 +44,38 @@ Built with **Flutter** (frontend) and **Spring Boot + MongoDB** (backend).
 
 ```bash
 zomato-clone/
-│── frontend/ (Flutter app)
-│   ├── lib/
-│   │   ├── screens/        # Home, Cart, Profile, Payment, etc.
-│   │   ├── widgets/        # Reusable UI widgets
-│   │   ├── state/          # Riverpod providers
-│   │   └── main.dart
 │
-│── backend/ (Spring Boot)
-│   ├── src/main/java/com/zomato/...
-│   │   ├── controllers/
-│   │   ├── services/
-│   │   ├── models/
-│   │   ├── repositories/
-│   │   └── config/
-│   └── pom.xml
-
+├── lib/
+│   ├── screens/
+│   │   ├── home_screen.dart
+│   │   ├── search_screen.dart
+│   │   ├── cart_screen.dart
+│   │   ├── profile_screen.dart
+│   │   ├── order_tracking_screen.dart
+│   │   └── payment_screen.dart
+│   │
+│   ├── widgets/
+│   │   ├── top_app_bar.dart
+│   │   ├── search_bar.dart
+│   │   ├── gold_banner.dart
+│   │   ├── category_list.dart
+│   │   ├── filter_row.dart
+│   │   ├── recommended_list.dart
+│   │   └── filter_widget.dart
+│   │
+│   ├── models/
+│   │   ├── restaurant.dart
+│   │   ├── category.dart
+│   │   ├── user.dart
+│   │   └── order.dart
+│   │
+│   ├── providers/     # State management (Riverpod)
+│   ├── services/      # API integration
+│   ├── utils/         # Constants, helpers
+│   └── main.dart
+│
+├── pubspec.yaml
+└── README.md
 ```
 
 ---
