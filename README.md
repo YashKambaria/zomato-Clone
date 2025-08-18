@@ -40,24 +40,27 @@ Built with **Flutter** (frontend) and **Spring Boot + MongoDB** (backend).
 
 ---
 
-## 📂 Project Structure  
+## 📂 Project Structure
+
+```bash
 zomato-clone/
 │── frontend/ (Flutter app)
-│ ├── lib/
-│ │ ├── screens/ # Home, Cart, Profile, Payment, etc.
-│ │ ├── widgets/ # Reusable UI widgets
-│ │ ├── state/ # Riverpod providers
-│ │ └── main.dart
+│   ├── lib/
+│   │   ├── screens/        # Home, Cart, Profile, Payment, etc.
+│   │   ├── widgets/        # Reusable UI widgets
+│   │   ├── state/          # Riverpod providers
+│   │   └── main.dart
 │
 │── backend/ (Spring Boot)
-│ ├── src/main/java/com/zomato/...
-│ │ ├── controllers/
-│ │ ├── services/
-│ │ ├── models/
-│ │ ├── repositories/
-│ │ └── config/
-│ └── pom.xml
+│   ├── src/main/java/com/zomato/...
+│   │   ├── controllers/
+│   │   ├── services/
+│   │   ├── models/
+│   │   ├── repositories/
+│   │   └── config/
+│   └── pom.xml
 
+```
 
 ---
 
