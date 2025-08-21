@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zomato_clone/widgets/categoryScroller.dart';
+import 'package:zomato_clone/widgets/explore_more_widget.dart';
 import 'package:zomato_clone/widgets/filter_widget.dart';
 import 'package:zomato_clone/widgets/recommended_widget.dart';
 import 'package:zomato_clone/widgets/search_bar_widget.dart';
@@ -124,7 +125,7 @@ class _HomeState extends State<Home> {
             SliverToBoxAdapter(child: FilterWidget()),
             SliverToBoxAdapter(
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(15),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "RECOMMENDED FOR YOU",
@@ -134,10 +135,19 @@ class _HomeState extends State<Home> {
             ),
             SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
             SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
-            SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
-            SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
-            SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
-            SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
+            SliverToBoxAdapter(
+              child: Container(
+                padding: EdgeInsets.all(15),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "EXPLORE MORE",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+            ),
+            SliverToBoxAdapter(child: ExploreMoreWidget(),),
+            SliverToBoxAdapter(child: SizedBox(height: 40,)),
+
           ],
         ),
       ),
