@@ -22,38 +22,43 @@ class ExploreMoreWidget extends StatelessWidget {
         separatorBuilder: (_, __) => SizedBox(width: 10),
         itemCount: list.length,
         itemBuilder: (context, index) {
-          return Container(
-            height: 100,
-            width: 90,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255,33,31,42),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Column(
-              children: [
-                Container(
-                  height: 60,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255,33,31,42),
-                    image: DecorationImage(
-                      image: AssetImage(list[index].img as String),
-                      fit: BoxFit.fill,
+          return GestureDetector(
+            onTap: (){
+              print(list[index].name);
+            },
+            child: Container(
+              height: 100,
+              width: 90,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255,33,31,42),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 60,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255,33,31,42),
+                      image: DecorationImage(
+                        image: AssetImage(list[index].img as String),
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
 
-                ),
-                SizedBox(height: 8,),
-                Expanded(
-                  child: Text(
-                    list[index].name as String,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+                  ),
+                  SizedBox(height: 8,),
+                  Expanded(
+                    child: Text(
+                      list[index].name as String,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         },
