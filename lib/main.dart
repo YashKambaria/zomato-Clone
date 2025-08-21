@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zomato_clone/screen/home.dart';
+import 'package:zomato_clone/screen/main_screen.dart';
 import 'package:zomato_clone/screen/splashScreen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
-      home: Home(),
+      home: MainScreen(),
     );
   }
 }
