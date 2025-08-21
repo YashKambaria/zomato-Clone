@@ -146,7 +146,36 @@ class _HomeState extends State<Home> {
               ),
             ),
             SliverToBoxAdapter(child: ExploreMoreWidget(),),
-            SliverToBoxAdapter(child: SizedBox(height: 40,)),
+            SliverToBoxAdapter(child: SizedBox(height: 30,)),
+            SliverToBoxAdapter(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(15),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "TOP VEGETARIAN CHOICES",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: (){
+                      print("see all");
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "See all",
+                        style: TextStyle(color: Colors.green),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
 
           ],
         ),
