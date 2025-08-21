@@ -14,7 +14,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 170,
+      height: 160,
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: 18),
         scrollDirection: Axis.horizontal,
