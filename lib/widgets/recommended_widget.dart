@@ -97,7 +97,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      widget.bucket[index].rating as String,
+                                      widget.bucket[index].rating.toString(),
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 10,
