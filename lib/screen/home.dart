@@ -5,6 +5,7 @@ import 'package:zomato_clone/widgets/filter_widget.dart';
 import 'package:zomato_clone/widgets/recommended_widget.dart';
 import 'package:zomato_clone/widgets/search_bar_widget.dart';
 import 'package:zomato_clone/widgets/toggle_mode_widget.dart';
+import 'package:zomato_clone/widgets/vegetarian_widget.dart';
 import 'package:zomato_clone/widgets/zomato_gold_widget.dart';
 import '../module/home_item_card.dart';
 import '../widgets/top_app_bar_widget.dart';
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
       'assets/Faasos.png',
       "FLAT 50% off",
       "Cake",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Faasos - Wraps and rolls",
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
       'assets/Noodles.avif',
       "50% off",
       "Faasos - Wraps and rolls ",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Chinese King",
@@ -40,7 +41,7 @@ class _HomeState extends State<Home> {
       'assets/Cake.avif',
       "50% off",
       "Cake",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Faasos - Wraps and rolls",
@@ -49,7 +50,7 @@ class _HomeState extends State<Home> {
       'assets/Cake.avif',
       "50% off",
       "Cake",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Faasos - Wraps and rolls",
@@ -58,7 +59,7 @@ class _HomeState extends State<Home> {
       'assets/Cake.avif',
       "50% off",
       "Cake",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Monginis",
@@ -67,7 +68,7 @@ class _HomeState extends State<Home> {
       'assets/Cake.avif',
       "50% off",
       "Cake",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Faasos - Wraps and rolls",
@@ -76,7 +77,7 @@ class _HomeState extends State<Home> {
       'assets/Cake.avif',
       "50% off",
       "Cake",
-      "4.5",
+      4.5,
       "20",
       "25",
       "Faasos - Wraps and rolls",
@@ -85,7 +86,7 @@ class _HomeState extends State<Home> {
       'assets/Cake.avif',
       "50% off",
       "Cake",
-      "4.5",
+      4.2,
       "20",
       "25",
       "Faasos - Wraps and rolls",
@@ -129,7 +130,7 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "RECOMMENDED FOR YOU",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.grey,letterSpacing: 2),
                 ),
               ),
             ),
@@ -141,7 +142,7 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "EXPLORE MORE",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.grey,letterSpacing: 2),
                 ),
               ),
             ),
@@ -156,7 +157,7 @@ class _HomeState extends State<Home> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "TOP VEGETARIAN CHOICES",
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.grey,letterSpacing: 2),
                     ),
                   ),
                   GestureDetector(
@@ -172,10 +173,12 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
+            SliverToBoxAdapter(
+              child:VegetarianWidget(bucket1),
+            )
 
           ],
         ),
