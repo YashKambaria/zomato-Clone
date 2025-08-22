@@ -1,10 +1,8 @@
-import 'package:flutter/material.dart';
-
 class HomeItemCard{
   String? img;
   String? offer;
   String? itemName;
-  String? rating;
+  double? rating;
   String? minTime;
   String? maxTime;
   String? Restaurant;
