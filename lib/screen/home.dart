@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zomato_clone/widgets/categoryScroller.dart';
+import 'package:zomato_clone/widgets/category_scroller.dart';
 import 'package:zomato_clone/widgets/explore_more_widget.dart';
 import 'package:zomato_clone/widgets/filter_widget.dart';
 import 'package:zomato_clone/widgets/recommended_widget.dart';
@@ -7,6 +7,7 @@ import 'package:zomato_clone/widgets/search_bar_widget.dart';
 import 'package:zomato_clone/widgets/toggle_mode_widget.dart';
 import 'package:zomato_clone/widgets/vegetarian_widget.dart';
 import 'package:zomato_clone/widgets/zomato_gold_widget.dart';
+import 'package:zomato_clone/widgets/zomato_style_carousel_widget.dart';
 import '../module/home_item_card.dart';
 import '../widgets/top_app_bar_widget.dart';
 
@@ -20,80 +21,89 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<HomeItemCard> bucket1 = [
     HomeItemCard(
-      'assets/Faasos.png',
-      "FLAT 50% off",
-      "Cake",
-      4.5,
-      "20",
-      "25",
+      ['assets/Faasos.png','assets/img6.jpeg'],
+      ["FLAT 50% off","Buy 1 Get 1"],
+      ["Wrap","Cheezy 7"],
+      [200,500],
+      [4.7,4.6],
+      "30",
+      "35",
+      "Lapin oz",
+    ),
+    HomeItemCard(
+      ['assets/Noodles.avif','assets/img2.jpeg'],
+      ["50% off"],
+      ["Wraps","rolls"],
+      [200,250],
+      [4.5,4.3],
+      "40",
+      "45",
       "Faasos - Wraps and rolls",
     ),
     HomeItemCard(
-      'assets/Noodles.avif',
-      "50% off",
-      "Faasos - Wraps and rolls ",
-      4.5,
-      "20",
-      "25",
-      "Chinese King",
-    ),
-    HomeItemCard(
-      'assets/Cake.avif',
-      "50% off",
-      "Cake",
-      4.5,
-      "20",
-      "25",
-      "Faasos - Wraps and rolls",
-    ),
-    HomeItemCard(
-      'assets/Cake.avif',
-      "50% off",
-      "Cake",
-      4.5,
-      "20",
-      "25",
-      "Faasos - Wraps and rolls",
-    ),
-    HomeItemCard(
-      'assets/Cake.avif',
-      "50% off",
-      "Cake",
-      4.5,
+      ['assets/Cake.avif'],
+      ["50% off"],
+      ["Cake"],
+      [200],
+      [4.5],
       "20",
       "25",
       "Monginis",
     ),
     HomeItemCard(
-      'assets/Cake.avif',
-      "50% off",
-      "Cake",
-      4.5,
+      ['assets/img1.jpeg','assets/img5.jpeg'],
+      ["50% off","20% off"],
+      ["Sandwich","French-Fries"],
+      [200,167],
+      [4.5,4.2],
       "20",
       "25",
-      "Faasos - Wraps and rolls",
+      "Manekchowk",
     ),
     HomeItemCard(
-      'assets/Cake.avif',
-      "50% off",
-      "Cake",
-      4.5,
+      ['assets/img2.jpeg','assets/img7.jpeg'],
+      ["50% off","20% off"],
+      ["Burger","Platter"],
+      [200,230],
+      [4.5,4.7],
       "20",
       "25",
-      "Faasos - Wraps and rolls",
+      "MC Donald",
     ),
     HomeItemCard(
-      'assets/Cake.avif',
-      "50% off",
-      "Cake",
-      4.2,
+      ['assets/img3.jpeg','assets/img1.jpeg','assets/img4.jpeg'],
+      ["50% off","15% off","Buy One Get One"],
+      ["Burger","Sandwich","Paneer Chill"],
+      [200,210,310],
+      [4.1,4.2,3.6],
       "20",
       "25",
-      "Faasos - Wraps and rolls",
+      "Jay Bhavani",
+    ),
+    HomeItemCard(
+      ['assets/img4.jpeg'],
+      ["30% off"],
+      ["Panner Chilly"],
+      [200],
+      [4.4],
+      "20",
+      "25",
+      "Marutinandan Restaurant",
+    ),
+    HomeItemCard(
+      ['assets/img5.jpeg'],
+      ["40% off"],
+      ["French Fries"],
+      [150],
+      [4.2],
+      "20",
+      "25",
+      "Burger King",
     ),
   ];
   @override
   Widget build(BuildContext context) {
+    bucket1.shuffle();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 24, 23, 28),
       body: SafeArea(
@@ -116,12 +126,12 @@ class _HomeState extends State<Home> {
             ),
             SliverToBoxAdapter(child: ZomatoGoldWidget()),
             SliverAppBar(
-                pinned: true,
-                backgroundColor: Color.fromARGB(255, 24, 23, 28),
-                elevation: 0,
-                automaticallyImplyLeading: false,
-                toolbarHeight: 100,
-                flexibleSpace: Categoryscroller()
+              pinned: true,
+              backgroundColor: Color.fromARGB(255, 24, 23, 28),
+              elevation: 0,
+              automaticallyImplyLeading: false,
+              toolbarHeight: 100,
+              flexibleSpace: Categoryscroller(),
             ),
             SliverToBoxAdapter(child: FilterWidget()),
             SliverToBoxAdapter(
@@ -130,7 +140,7 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "RECOMMENDED FOR YOU",
-                  style: TextStyle(color: Colors.grey,letterSpacing: 2),
+                  style: TextStyle(color: Colors.grey, letterSpacing: 2),
                 ),
               ),
             ),
@@ -142,26 +152,26 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "EXPLORE MORE",
-                  style: TextStyle(color: Colors.grey,letterSpacing: 2),
+                  style: TextStyle(color: Colors.grey, letterSpacing: 2),
                 ),
               ),
             ),
-            SliverToBoxAdapter(child: ExploreMoreWidget(),),
-            SliverToBoxAdapter(child: SizedBox(height: 30,)),
+            SliverToBoxAdapter(child: ExploreMoreWidget()),
+            SliverToBoxAdapter(child: SizedBox(height: 10)),
             SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(10),
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "TOP VEGETARIAN CHOICES",
-                      style: TextStyle(color: Colors.grey,letterSpacing: 2),
+                      style: TextStyle(color: Colors.grey, letterSpacing: 2),
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       print("see all");
                     },
                     child: Container(
@@ -176,14 +186,39 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
-            SliverToBoxAdapter(
-              child:VegetarianWidget(bucket1),
-            )
+            SliverToBoxAdapter(child: VegetarianWidget(bucket1)),
+            SliverToBoxAdapter(child: SizedBox(height: 8)),
+            SliverList.separated(
+              itemCount: bucket1.length,
+              itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
+                child: ZomatoStyleCarouselWidget(bucket1[index]),
+              );
+            },
+              separatorBuilder: (_, __) => const SizedBox(height: 1),
 
+              // CarouselSlider(
+              //   options: CarouselOptions(
+              //     viewportFraction: 1,
+              //     autoPlay: true,
+              //     height: 200,
+              //   ),
+              //   items:
+              //   item.img?.map((img) {
+              //     return ClipRRect(
+              //       borderRadius: BorderRadius.vertical(
+              //         top: Radius.circular(10),
+              //       ),
+              //       child: Image.asset(img, fit: BoxFit.cover),
+              //     );
+              //   }).toList(),
+              // ),
+
+            ),
           ],
         ),
       ),
     );
   }
 }
-

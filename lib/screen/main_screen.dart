@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zomato_clone/screen/home.dart';
-import 'package:zomato_clone/screen/splashScreen.dart';
+import 'package:zomato_clone/screen/splash_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -35,9 +35,9 @@ class _MainScreenState extends State<MainScreen> {
         selectedFontSize: 15,
         type: BottomNavigationBarType.fixed,
           items: const[
-             const BottomNavigationBarItem(icon: Icon(Icons.delivery_dining_outlined),label: "Delivery",),
-             const BottomNavigationBarItem(icon: Icon(Icons.dinner_dining_outlined),label: "Dining"),
-             const BottomNavigationBarItem(icon: Icon(Icons.rocket_launch),label: 'District',),
+              BottomNavigationBarItem(icon: Icon(Icons.delivery_dining_outlined),label: "Delivery",),
+              BottomNavigationBarItem(icon: Icon(Icons.dinner_dining_outlined),label: "Dining"),
+              BottomNavigationBarItem(icon: Icon(Icons.rocket_launch),label: 'District',),
 
           ],
         onTap: _onItemTapped,

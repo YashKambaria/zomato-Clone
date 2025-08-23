@@ -23,7 +23,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: (){
-              print("clicked of ${widget.bucket[index].Restaurant}");
+              print("clicked of ${widget.bucket[index].restaurant}");
             },
             child: SizedBox(
               width: 140,
@@ -39,7 +39,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
                           shape: BoxShape.rectangle,
                           borderRadius: BorderRadius.all(Radius.circular(12)),
                           image: DecorationImage(
-                            image: AssetImage(widget.bucket[index].img as String),
+                            image: AssetImage(widget.bucket[index].img?.first as String),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -60,7 +60,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
                             color: Colors.black.withValues(alpha: 0.7),
                           ),
                           child: Text(
-                            widget.bucket[index].offer as String,
+                            widget.bucket[index].offer?.first as String,
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
@@ -97,7 +97,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      widget.bucket[index].rating.toString(),
+                                      widget.bucket[index].rating!.first.toString(),
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 10,
@@ -116,7 +116,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    widget.bucket[index].Restaurant as String,
+                    widget.bucket[index].restaurant as String,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

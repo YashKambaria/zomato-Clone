@@ -28,10 +28,10 @@ class RestaurantCardWidget extends StatelessWidget {
                 child: Stack(
                   children: [
                     Image.asset(
-                      list[i].img as String,
+                      list[i].img?.first as String,
                       height: 120,
                       width: double.infinity,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                     if (list[i].offer != null)
                       Positioned(
@@ -47,7 +47,7 @@ class RestaurantCardWidget extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            list[i].offer as String,
+                            list[i].offer?.first as String,
                             style: const TextStyle(color: Colors.white, fontSize: 12),
                           ),
                         ),
@@ -67,7 +67,7 @@ class RestaurantCardWidget extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            "${list[i].Restaurant}",
+                            "${list[i].restaurant}",
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
@@ -89,7 +89,7 @@ class RestaurantCardWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               Text(
-                                list[i].rating.toString(),
+                                list[i].rating!.first.toString(),
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 10,

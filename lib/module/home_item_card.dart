@@ -1,12 +1,13 @@
 class HomeItemCard{
-  String? img;
-  String? offer;
-  String? itemName;
-  double? rating;
+  List<String>? img;
+  List<String>? offer;
+  List<String>? items;
+  List<int>? prices;
+  List<double>? rating;
   String? minTime;
   String? maxTime;
-  String? Restaurant;
+  String? restaurant;
 
-  HomeItemCard(this.img, this.offer, this.itemName, this.rating, this.minTime,
-      this.maxTime,this.Restaurant);
+  HomeItemCard(this.img, this.offer, this.items,this.prices ,this.rating, this.minTime,
+      this.maxTime,this.restaurant);
 }
