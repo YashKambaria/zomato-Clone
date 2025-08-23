@@ -43,7 +43,7 @@ class _TopAppBarWidgetState extends State<TopAppBarWidget> {
               ),
               Text(
                 "building 1,9th floor,908, Manmandir host...",
-                style: TextStyle(color: Colors.white, fontSize: 14),
+                style: TextStyle(color: Colors.white, fontSize: 12),
               ),
             ],
           ),
