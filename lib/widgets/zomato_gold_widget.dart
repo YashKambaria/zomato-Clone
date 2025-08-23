@@ -16,7 +16,7 @@ class ZomatoGoldWidget extends StatelessWidget {
         );
       },
       child: Container(
-        padding: EdgeInsets.all(4),
+        padding: EdgeInsets.symmetric(vertical: 4,horizontal: 12),
         decoration: BoxDecoration(),
         child: Image.asset("assets/gold.png"),
       ),
@@ -36,19 +36,18 @@ class ZomatoGoldWidget extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text(
-                "Thank You",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  // fontWeight: FontWeight.bold,
-                ),
-              ),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255,15,129,69),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 )
+              ),
+              child: Text(
+                "Thank You",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
               ),
             ),
           ),
