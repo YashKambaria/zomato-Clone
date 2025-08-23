@@ -12,8 +12,7 @@ class _ToggleModeWidgetState extends State<ToggleModeWidget> {
   bool isOn=false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
+    return Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -47,7 +46,6 @@ class _ToggleModeWidgetState extends State<ToggleModeWidget> {
             ),
           )
         ],
-      ),
     );
   }
 }
