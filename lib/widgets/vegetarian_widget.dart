@@ -9,7 +9,7 @@ class VegetarianWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final sortedList = [...bucket]..sort((a, b) => b.rating!.compareTo(a.rating!));
+    final sortedList = [...bucket]..sort((a, b) => b.rating!.first.compareTo(a.rating!.first));
     final top4 = sortedList.take(min(4, sortedList.length)).toList();
 
     return Column(
