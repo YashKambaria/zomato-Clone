@@ -21,6 +21,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<HomeItemCard> bucket1 = [
     HomeItemCard(
+      1,
       ['assets/Faasos.png','assets/img6.jpeg'],
       ["FLAT 50% off","Buy 1 Get 1"],
       ["Wrap","Cheezy 7"],
@@ -31,6 +32,7 @@ class _HomeState extends State<Home> {
       "Lapin oz",
     ),
     HomeItemCard(
+      2,
       ['assets/Noodles.avif','assets/img2.jpeg'],
       ["50% off"],
       ["Wraps","rolls"],
@@ -41,6 +43,7 @@ class _HomeState extends State<Home> {
       "Faasos - Wraps and rolls",
     ),
     HomeItemCard(
+      3,
       ['assets/Cake.avif'],
       ["50% off"],
       ["Cake"],
@@ -51,6 +54,7 @@ class _HomeState extends State<Home> {
       "Monginis",
     ),
     HomeItemCard(
+      4,
       ['assets/img1.jpeg','assets/img5.jpeg'],
       ["50% off","20% off"],
       ["Sandwich","French-Fries"],
@@ -61,6 +65,7 @@ class _HomeState extends State<Home> {
       "Manekchowk",
     ),
     HomeItemCard(
+      5,
       ['assets/img2.jpeg','assets/img7.jpeg'],
       ["50% off","20% off"],
       ["Burger","Platter"],
@@ -71,6 +76,7 @@ class _HomeState extends State<Home> {
       "MC Donald",
     ),
     HomeItemCard(
+      6,
       ['assets/img3.jpeg','assets/img1.jpeg','assets/img4.jpeg'],
       ["50% off","15% off","Buy One Get One"],
       ["Burger","Sandwich","Paneer Chill"],
@@ -81,6 +87,7 @@ class _HomeState extends State<Home> {
       "Jay Bhavani",
     ),
     HomeItemCard(
+      7,
       ['assets/img4.jpeg'],
       ["30% off"],
       ["Panner Chilly"],
@@ -91,6 +98,7 @@ class _HomeState extends State<Home> {
       "Marutinandan Restaurant",
     ),
     HomeItemCard(
+      8,
       ['assets/img5.jpeg'],
       ["40% off"],
       ["French Fries"],
@@ -144,7 +152,6 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
             SliverToBoxAdapter(child: RecommendedWidget(bucket1)),
             SliverToBoxAdapter(
               child: Container(
