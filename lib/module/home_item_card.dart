@@ -7,7 +7,8 @@ class HomeItemCard{
   String? minTime;
   String? maxTime;
   String? restaurant;
+  int? id;
 
-  HomeItemCard(this.img, this.offer, this.items,this.prices ,this.rating, this.minTime,
+  HomeItemCard(this.id,this.img, this.offer, this.items,this.prices ,this.rating, this.minTime,
       this.maxTime,this.restaurant);
 }

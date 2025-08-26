@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zomato_clone/module/home_item_card.dart';
+import 'package:zomato_clone/screen/restaurant_screen.dart';
 
 class RecommendedWidget extends StatefulWidget {
   final List<HomeItemCard> bucket;
@@ -23,6 +24,7 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: (){
+              Navigator.pushNamed(context,'/restaurant',arguments: widget.bucket[index]);
               print("clicked of ${widget.bucket[index].restaurant}");
             },
             child: SizedBox(
@@ -32,15 +34,18 @@ class _RecommendedWidgetState extends State<RecommendedWidget> {
                 children: [
                   Stack(
                     children: [
-                      Container(
-                        height:90,
-                        width: 140,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-                          image: DecorationImage(
-                            image: AssetImage(widget.bucket[index].img?.first as String),
-                            fit: BoxFit.fill,
+                      Hero(
+                        tag: "image-${widget.bucket[index].id}",
+                        child: Container(
+                          height:90,
+                          width: 140,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            image: DecorationImage(
+                              image: AssetImage(widget.bucket[index].img?.first as String),
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                       ),
