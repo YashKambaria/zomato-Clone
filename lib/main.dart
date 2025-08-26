@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zomato_clone/screen/main_screen.dart';
+import 'package:zomato_clone/screen/restaurant_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/restaurant': (context) => RestaurantScreen(),
+        '/home':(context)=>MainScreen(),
+
+      },
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       home: MainScreen(),
